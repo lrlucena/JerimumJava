@@ -18,31 +18,40 @@ import javax.imageio.ImageIO;
 import java.util.ArrayList;
 
 public class Imagem {
+    public Imagem(String image) {
+    }
+
+    public void desenhar(double x, double y, double camada, double angulo) {
+    }
+
+}
+
+class Imagem2 {
     final BufferedImage buffer;
     private final String caminho;
 
-    public Imagem(BufferedImage buffer, String caminho) {
+    public Imagem2(BufferedImage buffer, String caminho) {
         this.buffer = buffer;
         this.caminho = caminho;
     }
 
-    public static Imagem carregar(String caminho) {
+    public static Imagem2 carregar(String caminho) {
         try {
             BufferedImage img = ImageIO.read(new File(caminho));
-            return new Imagem(img, caminho);
+            return new Imagem2(img, caminho);
         } catch (IOException e) {
             e.printStackTrace();
-            return new Imagem(new BufferedImage(200, 200, BufferedImage.TYPE_INT_RGB), caminho);
+            return new Imagem2(new BufferedImage(200, 200, BufferedImage.TYPE_INT_RGB), caminho);
         }
     }
 
-    public List<Imagem> fatie(int x, int y) {
-        List<Imagem> lista = new ArrayList<>();
+    public List<Imagem2> fatie(int x, int y) {
+        List<Imagem2> lista = new ArrayList<>();
         for (int j = 0; j < buffer.getHeight(); j += y) {
             for (int i = 0; i < buffer.getWidth(); i += x) {
                 if (i + x <= buffer.getWidth() && j + y <= buffer.getHeight()) {
                     BufferedImage subImage = buffer.getSubimage(i, j, x, y);
-                    lista.add(new Imagem(subImage, caminho));
+                    lista.add(new Imagem2(subImage, caminho));
                 }
             }
         }

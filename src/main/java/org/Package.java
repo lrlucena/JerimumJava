@@ -4,7 +4,7 @@
 package org;
 
 public class Package {
-    public static final Jogo jogo = new Jogo();
+    public static final Jogo2 jogo = new Jogo2();
     public static final Mouse mouse = new Mouse();
     public static final Teclado teclado = new Teclado();
     public static final Relogio relogio = new Relogio();

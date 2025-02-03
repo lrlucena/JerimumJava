@@ -13,9 +13,41 @@ package org;
 
 import java.awt.Graphics2D;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.function.Consumer;
 
-public class Jogo implements Runnable {
+public abstract class Jogo {
+    private String titulo;
+    private double largura;
+    private double altura;
+    private int fps;
+
+    public Jogo(String titulo, double largura, double altura, int fps){
+        this.titulo = titulo;
+        this.largura = largura;
+        this.altura = altura;
+        this.fps = fps;
+    }
+    public Jogo(String titulo, double largura, double altura){
+        this(titulo, largura, altura, 60);
+    }
+    public Jogo(String titulo){
+        this(titulo, 640, 480);
+    }
+    public Jogo(){
+        this("");
+    }
+
+    public double getLargura() {
+        return this.largura;
+    }
+    public double getAltura() {
+        return this.altura;
+    }
+
+    public abstract void atualizar();
+    public abstract void desenhar();
+}
+
+class Jogo2 implements Runnable {
     private String titulo = "Sem Nome";
     private int largura = 640;
     private int altura = 480;
