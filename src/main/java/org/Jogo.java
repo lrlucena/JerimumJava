@@ -18,12 +18,14 @@ public abstract class Jogo {
     private String titulo;
     private double largura;
     private double altura;
+    private Tela tela;
     private int fps;
 
     public Jogo(String titulo, double largura, double altura, int fps){
         this.titulo = titulo;
         this.largura = largura;
         this.altura = altura;
+        this.tela = new Tela();
         this.fps = fps;
     }
     public Jogo(String titulo, double largura, double altura){
@@ -41,6 +43,10 @@ public abstract class Jogo {
     }
     public double getAltura() {
         return this.altura;
+    }
+
+    public Tela getTela() {
+        return this.tela;
     }
 
     public abstract void atualizar();

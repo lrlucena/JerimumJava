@@ -3,7 +3,11 @@ package org;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Teclado implements KeyListener {
+public class Teclado {
+    
+}
+
+public class Teclado2 implements KeyListener {
     private static final boolean[] teclas = new boolean[256];
 
     private void update(KeyEvent e, boolean valor) {

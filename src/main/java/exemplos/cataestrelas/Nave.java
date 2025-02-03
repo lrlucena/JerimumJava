@@ -49,10 +49,10 @@ public class Nave {
     }
 
     public List<Estrela> catarEstrelas(List<Estrela> estrelas) {
-        var catado = estrelas.stream().filter(
+        var estrelasLonge = estrelas.stream().filter(
             estrela -> Util.distancia(this.x, this.y, estrela.getX(), estrela.getY()) >= 35
         ).collect(Collectors.toList());
-        this.pontos += 10 * (estrelas.size() - catado.size());
-        return catado;
+        this.pontos += 10 * (estrelas.size() - estrelasLonge.size());
+        return estrelasLonge;
     }
 }

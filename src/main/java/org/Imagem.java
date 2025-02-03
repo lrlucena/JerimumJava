@@ -21,7 +21,19 @@ public class Imagem {
     public Imagem(String image) {
     }
 
-    public void desenhar(double x, double y, double camada, double angulo) {
+    public void desenhar(double x, double y, double camada, double angulo, double centralizado) {
+    }
+
+    public void desenhar(double x, double y, double camada, double centralizado) {
+        desenhar(x, y, camada, 0, centralizado);
+    }
+
+    public void desenhar(double x, double y, double camada) {
+        desenhar(x, y, camada, 0, true);
+    }
+
+    public List<Imagem> fatiar(int x, int y) {
+        return new ArrayList<>(); // TODO:
     }
 
 }
