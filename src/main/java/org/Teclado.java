@@ -3,11 +3,29 @@ package org;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Teclado {
-    
+public class Teclado implements KeyListener {
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
+
+    public boolean teclaPessionada(int vkI) {
+        return false;  // TODO:
+    }
 }
 
-public class Teclado2 implements KeyListener {
+class Teclado2 implements KeyListener {
     private static final boolean[] teclas = new boolean[256];
 
     private void update(KeyEvent e, boolean valor) {

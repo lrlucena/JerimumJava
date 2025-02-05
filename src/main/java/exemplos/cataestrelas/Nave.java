@@ -55,4 +55,8 @@ public class Nave {
         this.pontos += 10 * (estrelas.size() - estrelasLonge.size());
         return estrelasLonge;
     }
+
+    public int getPontos() {
+        return pontos;
+    }
 }

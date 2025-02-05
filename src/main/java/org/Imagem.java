@@ -21,10 +21,14 @@ public class Imagem {
     public Imagem(String image) {
     }
 
-    public void desenhar(double x, double y, double camada, double angulo, double centralizado) {
+    public void desenhar(double x, double y, double camada, double angulo, boolean centralizado) {
     }
 
-    public void desenhar(double x, double y, double camada, double centralizado) {
+    public void desenhar(double x, double y, double camada, double angulo) {
+        desenhar(x, y, camada, angulo, true);
+    }
+
+    public void desenhar(double x, double y, double camada, boolean centralizado) {
         desenhar(x, y, camada, 0, centralizado);
     }
 

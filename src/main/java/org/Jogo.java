@@ -25,7 +25,7 @@ public abstract class Jogo {
         this.titulo = titulo;
         this.largura = largura;
         this.altura = altura;
-        this.tela = new Tela();
+        this.tela = new Tela(titulo, largura, altura);
         this.fps = fps;
     }
     public Jogo(String titulo, double largura, double altura){

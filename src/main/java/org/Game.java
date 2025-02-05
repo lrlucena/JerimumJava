@@ -36,22 +36,22 @@ public class Game {
   }
 
   private static void atualizarMovimentoNave() {
-    if (Teclado.teclaPressionada(Teclado.TECLA_PARA_DIREITA)) {
+    if (Teclado2.teclaPressionada(Teclado2.TECLA_PARA_DIREITA)) {
       naveX += naveVelocidade;
     }
-    if (Teclado.teclaPressionada(Teclado.TECLA_PARA_ESQUERDA)) {
+    if (Teclado2.teclaPressionada(Teclado2.TECLA_PARA_ESQUERDA)) {
       naveX -= naveVelocidade;
     }
-    if (Teclado.teclaPressionada(Teclado.TECLA_PARA_CIMA)) {
+    if (Teclado2.teclaPressionada(Teclado2.TECLA_PARA_CIMA)) {
       naveY -= naveVelocidade;
     }
-    if (Teclado.teclaPressionada(Teclado.TECLA_W)) {
+    if (Teclado2.teclaPressionada(Teclado2.TECLA_W)) {
       naveY -= naveVelocidade;
     }
-    if (Teclado.teclaPressionada(Teclado.TECLA_A)) {
+    if (Teclado2.teclaPressionada(Teclado2.TECLA_A)) {
       naveX -= naveVelocidade;
     }
-    if (Teclado.teclaPressionada(Teclado.TECLA_D)) {
+    if (Teclado2.teclaPressionada(Teclado2.TECLA_D)) {
       naveX += naveVelocidade;
     }
 

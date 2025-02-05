@@ -8,12 +8,21 @@
 
 package org;
 
-import java.awt.Font;
+import java.awt.*;
 
 public class Fonte {
-    private final Font font;
 
     public Fonte(int tamanho) {
+    }
+
+    public void desenhar(String msg, double x, double y, int camada, Color cor) {
+    }
+}
+
+class Fonte2 {
+    private final Font font;
+
+    public Fonte2(int tamanho) {
         this.font = new Font("Dialog", Font.BOLD, tamanho);
     }
 

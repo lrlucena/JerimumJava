@@ -1,6 +1,10 @@
 package exemplos.cataestrelas;
 
+import org.Imagem;
+import org.Jogo;
+
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 import java.awt.Color;
 
@@ -11,12 +15,12 @@ public class Estrela {
     private List<Imagem> imagens;
     private Date data;
     
-    public Estela(Jogo jogo, Color cor)  {
+    public Estrela(Jogo jogo, Color cor)  {
         this.jogo = jogo;
         this.cor = cor;
         var r = new Random();
-        this.x = r.nextInt(this.jogo.getLargura());
-        this.y = r.nextInt(this.jogo.getAltura());
+        this.x = r.nextDouble(this.jogo.getLargura());
+        this.y = r.nextDouble(this.jogo.getAltura());
         this.imagens = new Imagem("estrela.png").fatiar(25, 25);
         data = new Date();
     }
@@ -34,9 +38,9 @@ public class Estrela {
     }
 
     public void desenhar() {
-        int indice = data.getTime() / 100 % imagens.size();
+        int indice = (int) (data.getTime() / 100 % imagens.size());
         Imagem imagem = imagens.get(indice);
-        imagem.desenhe(x, y, 1);
+        imagem.desenhar(x, y, 1);
     }
 
 }

@@ -28,7 +28,7 @@ public class Tela {
         };
         frame = new JFrame(titulo) {
             {
-                setIconImage(Imagem.carregar("potigol.png").buffer);
+                setIconImage(new Imagem("potigol.png").buffer);
                 setSize(dim);
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setResizable(false);
